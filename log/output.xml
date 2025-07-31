@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-07-31T11:18:54.514588" rpa="false" schemaversion="5">
+<suite id="s1" name="Test API" source="C:\Users\afiac\PycharmProjects\Proje_RobotFramework1\tests\Test_API.robot">
+<test id="s1-t1" name="Vérifier La Réponse D’un Post" line="8">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-07-31T11:18:54.951837" level="INFO">Creating Session using : alias=jsonplaceholder, url=https://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>jsonplaceholder</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-07-31T11:18:54.951568" elapsed="0.001225"/>
+</kw>
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2025-07-31T11:18:54.955157" level="FAIL">MissingSchema: Invalid URL 'jsonplaceholder': No scheme supplied. Perhaps you meant https://jsonplaceholder?</msg>
+<var>${response}</var>
+<arg>jsonplaceholder</arg>
+<arg>/posts/1</arg>
+<doc>Sends a GET request.</doc>
+<status status="FAIL" start="2025-07-31T11:18:54.952985" elapsed="0.005613">MissingSchema: Invalid URL 'jsonplaceholder': No scheme supplied. Perhaps you meant https://jsonplaceholder?</status>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2025-07-31T11:18:54.959252" elapsed="0.000167"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${response.json()["title"]}</arg>
+<arg>sunt aut facere</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" start="2025-07-31T11:18:54.959623" elapsed="0.000079"/>
+</kw>
+<status status="FAIL" start="2025-07-31T11:18:54.950704" elapsed="0.009256">MissingSchema: Invalid URL 'jsonplaceholder': No scheme supplied. Perhaps you meant https://jsonplaceholder?</status>
+</test>
+<status status="FAIL" start="2025-07-31T11:18:54.524295" elapsed="0.436823"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test API" id="s1" pass="0" fail="1" skip="0">Test API</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
