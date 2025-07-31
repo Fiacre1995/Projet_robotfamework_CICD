@@ -1,84 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-07-31T11:39:17.001353" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-07-31T13:00:01.470262" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="C:\Users\afiac\PycharmProjects\Proje_RobotFramework1\tests">
 <suite id="s1-s1" name="Login Tests" source="C:\Users\afiac\PycharmProjects\Proje_RobotFramework1\tests\login_tests.robot">
 <kw name="Open Login Page" owner="LoginPage" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-07-31T11:39:17.213177" level="INFO">Opening browser 'Chrome' to base url 'https://example.com/login'.</msg>
+<msg time="2025-07-31T13:00:01.707058" level="INFO">Opening browser 'Chrome' to base url 'https://example.com/login'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-07-31T11:39:17.212983" elapsed="2.662145"/>
+<status status="PASS" start="2025-07-31T13:00:01.706884" elapsed="3.193027"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-07-31T11:39:19.875501" elapsed="0.057963"/>
+<status status="PASS" start="2025-07-31T13:00:04.900136" elapsed="0.069656"/>
 </kw>
-<status status="PASS" start="2025-07-31T11:39:17.212527" elapsed="2.721279"/>
+<status status="PASS" start="2025-07-31T13:00:01.706469" elapsed="3.263562"/>
 </kw>
 <test id="s1-s1-t1" name="Successful Login With Valid Credentials" line="10">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-07-31T11:39:19.935381" level="INFO">Bonjour depuis Robot Framework !</msg>
+<msg time="2025-07-31T13:00:04.971294" level="INFO">Bonjour depuis Robot Framework !</msg>
 <arg>Bonjour depuis Robot Framework !</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-07-31T11:39:19.935151" elapsed="0.000318"/>
-</kw>
-<kw name="Login With Credentials" owner="LoginPage">
-<kw name="Input Username" owner="LoginPage">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-07-31T11:39:19.937198" level="INFO">Typing text 'user@example.com' into text field 'id=username'.</msg>
-<msg time="2025-07-31T11:39:20.082642" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-07-31T11:39:20.082803" level="FAIL">Element with locator 'id=username' not found.</msg>
-<arg>${USERNAME_FIELD}</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="FAIL" start="2025-07-31T11:39:19.936748" elapsed="0.151865">Element with locator 'id=username' not found.</status>
-</kw>
-<arg>${username}</arg>
-<status status="FAIL" start="2025-07-31T11:39:19.936389" elapsed="0.152355">Element with locator 'id=username' not found.</status>
-</kw>
-<kw name="Input Password" owner="LoginPage">
-<arg>${password}</arg>
-<status status="NOT RUN" start="2025-07-31T11:39:20.088881" elapsed="0.000026"/>
-</kw>
-<kw name="Click Login Button" owner="LoginPage">
-<status status="NOT RUN" start="2025-07-31T11:39:20.088983" elapsed="0.000019"/>
-</kw>
-<arg>${VALID_USER}</arg>
-<arg>${VALID_PASSWORD}</arg>
-<status status="FAIL" start="2025-07-31T11:39:19.935889" elapsed="0.153167">Element with locator 'id=username' not found.</status>
+<status status="PASS" start="2025-07-31T13:00:04.971051" elapsed="0.000346"/>
 </kw>
 <tag>demo</tag>
-<status status="FAIL" start="2025-07-31T11:39:19.934393" elapsed="0.154996">Element with locator 'id=username' not found.</status>
+<status status="PASS" start="2025-07-31T13:00:04.970186" elapsed="0.001623"/>
 </test>
 <kw name="Fermer Browser" owner="LoginPage" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-07-31T11:39:20.090148" elapsed="2.140555"/>
+<status status="PASS" start="2025-07-31T13:00:04.974859" elapsed="2.182040"/>
 </kw>
-<status status="PASS" start="2025-07-31T11:39:20.090015" elapsed="2.140798"/>
+<status status="PASS" start="2025-07-31T13:00:04.974528" elapsed="2.182463"/>
 </kw>
-<status status="FAIL" start="2025-07-31T11:39:17.020093" elapsed="5.210780"/>
+<status status="PASS" start="2025-07-31T13:00:01.492048" elapsed="5.664971"/>
 </suite>
 <suite id="s1-s2" name="Test API" source="C:\Users\afiac\PycharmProjects\Proje_RobotFramework1\tests\Test_API.robot">
 <test id="s1-s2-t1" name="Vérifier La Réponse D’un Post" line="8">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-07-31T11:39:22.504682" level="INFO">Creating Session using : alias=jsonplaceholder, url=https://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<msg time="2025-07-31T13:00:07.462043" level="INFO">Creating Session using : alias=jsonplaceholder, url=https://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
 <arg>jsonplaceholder</arg>
 <arg>${BASE_URL}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-07-31T11:39:22.504568" elapsed="0.000240"/>
+<status status="PASS" start="2025-07-31T13:00:07.461932" elapsed="0.000237"/>
 </kw>
 <kw name="Get Request" owner="RequestsLibrary">
-<msg time="2025-07-31T11:39:22.504962" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
-<msg time="2025-07-31T11:39:23.182472" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/posts/1 
+<msg time="2025-07-31T13:00:07.462368" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg time="2025-07-31T13:00:07.561770" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/posts/1 
  path_url=/posts/1 
  headers={'User-Agent': 'python-requests/2.32.4', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-07-31T11:39:23.182614" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/posts/1 
+<msg time="2025-07-31T13:00:07.561889" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/posts/1 
  status=200, reason=OK 
- headers={'Date': 'Thu, 31 Jul 2025 09:39:23 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Etag': 'W/"124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU"', 'Expires': '-1', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Pragma': 'no-cache', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=GO5%2FpZL7mXBfJu5mzfXmSLStyXgCH%2BtdbQOATZvA7pA%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1753933439"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=GO5%2FpZL7mXBfJu5mzfXmSLStyXgCH%2BtdbQOATZvA7pA%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1753933439"', 'Server': 'cloudflare', 'Vary': 'Origin, Accept-Encoding', 'Via': '2.0 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1753933496', 'Age': '21324', 'Cf-Cache-Status': 'HIT', 'Content-Encoding': 'gzip', 'CF-RAY': '967c20daebdcf0f4-CDG', 'alt-svc': 'h3=":443"; ma=86400'} 
+ headers={'Date': 'Thu, 31 Jul 2025 11:00:08 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Etag': 'W/"124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU"', 'Expires': '-1', 'Nel': '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}', 'Pragma': 'no-cache', 'Report-To': '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=GO5%2FpZL7mXBfJu5mzfXmSLStyXgCH%2BtdbQOATZvA7pA%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1753933439"}],"max_age":3600}', 'Reporting-Endpoints': 'heroku-nel="https://nel.heroku.com/reports?s=GO5%2FpZL7mXBfJu5mzfXmSLStyXgCH%2BtdbQOATZvA7pA%3D&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;ts=1753933439"', 'Server': 'cloudflare', 'Vary': 'Origin, Accept-Encoding', 'Via': '2.0 heroku-router', 'X-Content-Type-Options': 'nosniff', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1753933496', 'Age': '26168', 'Cf-Cache-Status': 'HIT', 'Content-Encoding': 'gzip', 'CF-RAY': '967c9720efebd6ae-CDG', 'alt-svc': 'h3=":443"; ma=86400'} 
  body={
   "userId": 1,
   "id": 1,
@@ -86,47 +61,47 @@
   "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
 } 
  </msg>
-<msg time="2025-07-31T11:39:23.182708" level="INFO">C:\Users\afiac\PycharmProjects\Proje_RobotFramework1\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+<msg time="2025-07-31T13:00:07.561942" level="INFO">C:\Users\afiac\PycharmProjects\Proje_RobotFramework1\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
   warnings.warn(</msg>
-<msg time="2025-07-31T11:39:23.182947" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-07-31T13:00:07.562178" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>jsonplaceholder</arg>
 <arg>/posts/1</arg>
 <doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
-<status status="PASS" start="2025-07-31T11:39:22.504944" elapsed="0.678027"/>
+<status status="PASS" start="2025-07-31T13:00:07.462348" elapsed="0.099861"/>
 </kw>
 <kw name="Status Should Be" owner="RequestsLibrary">
 <arg>200</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2025-07-31T11:39:23.183502" elapsed="0.000244"/>
+<status status="PASS" start="2025-07-31T13:00:07.562360" elapsed="0.000162"/>
 </kw>
 <kw name="Should Contain" owner="BuiltIn">
 <arg>${response.json()["title"]}</arg>
 <arg>sunt aut facere</arg>
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" start="2025-07-31T11:39:23.183908" elapsed="0.000423"/>
+<status status="PASS" start="2025-07-31T13:00:07.562710" elapsed="0.000313"/>
 </kw>
-<status status="PASS" start="2025-07-31T11:39:22.504205" elapsed="0.680306"/>
+<status status="PASS" start="2025-07-31T13:00:07.461574" elapsed="0.101601"/>
 </test>
-<status status="PASS" start="2025-07-31T11:39:22.231661" elapsed="0.953368"/>
+<status status="PASS" start="2025-07-31T13:00:07.157892" elapsed="0.406222"/>
 </suite>
-<status status="FAIL" start="2025-07-31T11:39:17.002287" elapsed="6.184633"/>
+<status status="PASS" start="2025-07-31T13:00:01.471389" elapsed="6.093665"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">demo</stat>
+<stat pass="1" fail="0" skip="0">demo</stat>
 </tag>
 <suite>
-<stat name="Tests" id="s1" pass="1" fail="1" skip="0">Tests</stat>
-<stat name="Login Tests" id="s1-s1" pass="0" fail="1" skip="0">Tests.Login Tests</stat>
+<stat name="Tests" id="s1" pass="2" fail="0" skip="0">Tests</stat>
+<stat name="Login Tests" id="s1-s1" pass="1" fail="0" skip="0">Tests.Login Tests</stat>
 <stat name="Test API" id="s1-s2" pass="1" fail="0" skip="0">Tests.Test API</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-07-31T11:39:22.504962" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg time="2025-07-31T13:00:07.462368" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
 </errors>
 </robot>

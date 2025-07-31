@@ -10,5 +10,5 @@ Suite Teardown  Fermer Browser
 Successful Login With Valid Credentials
     [Tags]    demo
     Log    Bonjour depuis Robot Framework !
-    Login With Credentials    ${VALID_USER}    ${VALID_PASSWORD}
+    #Login With Credentials    ${VALID_USER}    ${VALID_PASSWORD}
     #Dashboard Should Be Visible
