@@ -11,6 +11,7 @@ ${LOGIN_BUTTON}     id=loginBtn
 *** Keywords ***
 Open Login Page
     Open Browser    ${URL}    ${BROWSER}
+
     Maximize Browser Window
     #Wait Until Element Is Visible    ${USERNAME_FIELD}    10s
 

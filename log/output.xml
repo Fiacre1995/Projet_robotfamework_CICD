@@ -1,46 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-07-31T11:18:54.514588" rpa="false" schemaversion="5">
-<suite id="s1" name="Test API" source="C:\Users\afiac\PycharmProjects\Proje_RobotFramework1\tests\Test_API.robot">
-<test id="s1-t1" name="Vérifier La Réponse D’un Post" line="8">
-<kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-07-31T11:18:54.951837" level="INFO">Creating Session using : alias=jsonplaceholder, url=https://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<arg>jsonplaceholder</arg>
-<arg>${BASE_URL}</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-07-31T11:18:54.951568" elapsed="0.001225"/>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-08-03T01:00:57.669988" rpa="false" schemaversion="5">
+<suite id="s1" name="Keyword" source="C:\Users\afiac\PycharmProjects\Proje_RobotFramework1\resources\keyword.robot">
+<test id="s1-t1" name="Charger Un Utilisateur Valide" line="10">
+<kw name="charger fichier json">
+<kw name="Load Json From File" owner="JSONLibrary">
+<msg time="2025-08-03T01:00:58.388634" level="INFO">${data} = {'valid_user': {'username': 'testuser', 'password': 'secure123'}, 'invalid_user': {'username': 'wronguser', 'password': 'badpass'}}</msg>
+<var>${data}</var>
+<arg>${fichier}</arg>
+<doc>Load JSON from file.</doc>
+<status status="PASS" start="2025-08-03T01:00:58.386321" elapsed="0.004025"/>
 </kw>
-<kw name="GET" owner="RequestsLibrary">
-<msg time="2025-07-31T11:18:54.955157" level="FAIL">MissingSchema: Invalid URL 'jsonplaceholder': No scheme supplied. Perhaps you meant https://jsonplaceholder?</msg>
-<var>${response}</var>
-<arg>jsonplaceholder</arg>
-<arg>/posts/1</arg>
-<doc>Sends a GET request.</doc>
-<status status="FAIL" start="2025-07-31T11:18:54.952985" elapsed="0.005613">MissingSchema: Invalid URL 'jsonplaceholder': No scheme supplied. Perhaps you meant https://jsonplaceholder?</status>
+<msg time="2025-08-03T01:00:58.390676" level="INFO">${data} = None</msg>
+<var>${data}</var>
+<arg>${JSON_PATH}</arg>
+<status status="PASS" start="2025-08-03T01:00:58.384636" elapsed="0.006235"/>
 </kw>
-<kw name="Status Should Be" owner="RequestsLibrary">
-<arg>200</arg>
-<arg>${response}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="NOT RUN" start="2025-07-31T11:18:54.959252" elapsed="0.000167"/>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2025-08-03T01:00:58.416286" level="INFO">${username} = []</msg>
+<var>${username}</var>
+<arg>${data}</arg>
+<arg>$.valid_user.username</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2025-08-03T01:00:58.391096" elapsed="0.025359"/>
 </kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${response.json()["title"]}</arg>
-<arg>sunt aut facere</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="NOT RUN" start="2025-07-31T11:18:54.959623" elapsed="0.000079"/>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2025-08-03T01:00:58.433812" level="INFO">${password} = []</msg>
+<var>${password}</var>
+<arg>${data}</arg>
+<arg>$.valid_user.password</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2025-08-03T01:00:58.416674" elapsed="0.017267"/>
 </kw>
-<status status="FAIL" start="2025-07-31T11:18:54.950704" elapsed="0.009256">MissingSchema: Invalid URL 'jsonplaceholder': No scheme supplied. Perhaps you meant https://jsonplaceholder?</status>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-03T01:00:58.434439" level="INFO">Username: [], Password: []</msg>
+<arg>Username: ${username}, Password: ${password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-03T01:00:58.434144" elapsed="0.000404"/>
+</kw>
+<status status="PASS" start="2025-08-03T01:00:58.382324" elapsed="0.052382"/>
 </test>
-<status status="FAIL" start="2025-07-31T11:18:54.524295" elapsed="0.436823"/>
+<status status="PASS" start="2025-08-03T01:00:57.681971" elapsed="0.753285"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Test API" id="s1" pass="0" fail="1" skip="0">Test API</stat>
+<stat name="Keyword" id="s1" pass="1" fail="0" skip="0">Keyword</stat>
 </suite>
 </statistics>
 <errors>
